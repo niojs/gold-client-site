@@ -33,17 +33,17 @@ export default function ContactsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative flex items-center justify-center py-32 px-6 overflow-hidden">
+      <section className="relative flex items-center justify-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--gold-dark)]/10 via-transparent to-transparent" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[var(--gold)]/5 rounded-full blur-[120px]" />
         <div className="relative text-center max-w-4xl mx-auto">
-          <p className="text-[var(--gold)] text-sm uppercase tracking-[0.3em] mb-4 font-medium">
+          <p className="text-[var(--gold)] text-xs sm:text-sm uppercase tracking-[0.3em] mb-4 font-medium">
             Контакты
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Свяжитесь с <span className="text-[var(--gold)]">нами</span>
           </h1>
-          <p className="text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
             Мы ответим на ваши вопросы и поможем определиться с объёмом работ
             для вашего проекта
           </p>
@@ -51,11 +51,11 @@ export default function ContactsPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="pb-32 px-6">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12">
+      <section className="pb-24 sm:pb-32 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Form */}
           <div className="lg:col-span-3">
-            <div className="bg-[var(--bg-card)]/60 backdrop-blur-sm border border-[var(--gold)]/10 rounded-2xl p-8 md:p-10">
+            <div className="bg-[var(--bg-card)]/60 backdrop-blur-sm border border-[var(--gold)]/10 rounded-2xl p-6 sm:p-8 md:p-10">
               <h2 className="text-2xl font-bold mb-8">
                 Напишите <span className="text-[var(--gold)]">нам</span>
               </h2>
@@ -168,8 +168,7 @@ export default function ContactsPage() {
                   <button
                     type="submit"
                     className="w-full sm:w-auto bg-[var(--gold)] text-[var(--bg-dark)] font-semibold px-10 py-3.5 rounded-full hover:bg-[var(--gold-light)] transition-colors duration-300"
-                  >
-                    Отправить сообщение
+                  >                    Отправить сообщение
                   </button>
                 </form>
               )}

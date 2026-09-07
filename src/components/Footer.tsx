@@ -23,7 +23,7 @@ export default function Footer() {
     <footer className="relative z-10 border-t-2 border-gradient-to-r from-transparent via-[var(--gold)] to-transparent">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <span className="text-lg font-bold bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold)] bg-clip-text text-transparent">

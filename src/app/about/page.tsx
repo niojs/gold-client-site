@@ -29,17 +29,17 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative flex items-center justify-center py-32 px-6 overflow-hidden">
+      <section className="relative flex items-center justify-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--gold-dark)]/10 via-transparent to-transparent" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[var(--gold)]/5 rounded-full blur-[120px]" />
         <div className="relative text-center max-w-4xl mx-auto">
-          <p className="text-[var(--gold)] text-sm uppercase tracking-[0.3em] mb-4 font-medium">
+          <p className="text-[var(--gold)] text-xs sm:text-sm uppercase tracking-[0.3em] mb-4 font-medium">
             О компании
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             ООО &laquo;<span className="text-[var(--gold)]">Спецбурстрой</span>&raquo;
           </h1>
-          <p className="text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
             Компания специализируется на геологической разведке,
             проектировании, подсчёте запасов и документальном сопровождении
             проектов золотодобычи
@@ -48,7 +48,7 @@ export default function AboutPage() {
       </section>
 
       {/* History */}
-      <section className="py-20 px-6">
+      <section className="py-14 sm:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -105,7 +105,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 px-6">
+      <section className="py-14 sm:py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="relative inline-block mb-8">
             <div className="absolute inset-0 bg-[var(--gold)]/10 rounded-full blur-2xl scale-150" />
@@ -124,7 +124,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 px-6">
+      <section className="py-14 sm:py-20 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-[var(--gold)] text-sm uppercase tracking-[0.3em] mb-3">
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
 
       {/* Certifications */}
-      <section className="py-20 px-6">
+      <section className="py-14 sm:py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-[var(--gold)] text-sm uppercase tracking-[0.3em] mb-3">

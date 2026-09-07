@@ -65,17 +65,17 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative flex items-center justify-center py-32 px-6 overflow-hidden">
+      <section className="relative flex items-center justify-center py-24 sm:py-32 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--gold-dark)]/10 via-transparent to-transparent" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[var(--gold)]/5 rounded-full blur-[120px]" />
         <div className="relative text-center max-w-4xl mx-auto">
-          <p className="text-[var(--gold)] text-sm uppercase tracking-[0.3em] mb-4 font-medium">
+          <p className="text-[var(--gold)] text-xs sm:text-sm uppercase tracking-[0.3em] mb-4 font-medium">
             Портфолио
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Наши <span className="text-[var(--gold)]">проекты</span>
           </h1>
-          <p className="text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
             Каждый проект — это комплексная работа от геологической разведки
             до полного документального сопровождения
           </p>
@@ -83,7 +83,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="px-6 pb-12">
+      <section className="px-4 sm:px-6 pb-10 sm:pb-12">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((cat) => (
@@ -100,7 +100,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="pb-32 px-6">
+      <section className="pb-24 sm:pb-32 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
@@ -142,7 +142,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Summary */}
-      <section className="pb-32 px-6">
+      <section className="pb-24 sm:pb-32 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="bg-[var(--bg-card)]/60 backdrop-blur-sm border border-[var(--gold)]/10 rounded-3xl p-12 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
