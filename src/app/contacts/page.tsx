@@ -111,40 +111,43 @@ export default function ContactsPage() {
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-[var(--text)] mb-2">
-                        Телефон
-                      </label>
-                      <input
-                        type="tel"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        placeholder="+7 (999) 123-45-67"
-                        className="w-full bg-[var(--bg-dark)] border border-[var(--gold)]/15 rounded-xl px-4 py-3 text-[var(--text)] placeholder:text-[var(--text-muted)]/40 focus:outline-none focus:border-[var(--gold)]/40 transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-[var(--text)] mb-2">
-                        Интересующая услуга
-                      </label>
-                      <select
-                        value={form.service}
-                        onChange={(e) => setForm({ ...form, service: e.target.value })}
-                        className="w-full bg-[var(--bg-dark)] border border-[var(--gold)]/15 rounded-xl px-4 py-3 text-[var(--text)] focus:outline-none focus:border-[var(--gold)]/40 transition-colors appearance-none"
-                        style={{
-                          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238a7e6a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")`,
-                          backgroundRepeat: "no-repeat",
-                          backgroundPosition: "right 1rem center",
-                        }}
-                      >
-                        <option value="">Выберите услугу</option>
-                        {services.map((s) => (
-                          <option key={s} value={s}>
+                  <div>
+                    <label className="block text-sm font-medium text-[var(--text)] mb-2">
+                      Телефон
+                    </label>
+                    <input
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      placeholder="+7 (999) 123-45-67"
+                      className="w-full sm:w-1/2 bg-[var(--bg-dark)] border border-[var(--gold)]/15 rounded-xl px-4 py-3 text-[var(--text)] placeholder:text-[var(--text-muted)]/40 focus:outline-none focus:border-[var(--gold)]/40 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-[var(--text)] mb-3">
+                      Интересующая услуга
+                    </label>
+                    <div className="flex flex-wrap gap-2">
+                      {services.map((s) => {
+                        const active = form.service === s;
+                        return (
+                          <button
+                            key={s}
+                            type="button"
+                            onClick={() =>
+                              setForm({ ...form, service: active ? "" : s })
+                            }
+                            className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
+                              active
+                                ? "bg-[var(--gold)]/15 border-[var(--gold)]/50 text-[var(--gold-light)]"
+                                : "bg-[var(--bg-dark)] border-[var(--gold)]/15 text-[var(--text-muted)] hover:border-[var(--gold)]/35 hover:text-[var(--text)]"
+                            }`}
+                          >
                             {s}
-                          </option>
-                        ))}
-                      </select>
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
 
